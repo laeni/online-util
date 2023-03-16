@@ -18,11 +18,11 @@ interface PerseChar {
     unicode2: string;
     /** UTF-8 二进制编码. */
     utf8_2: string[];
-    /** UTF-8 Uint8(Golang). */
+    /** UTF-8 Uint8(无符号). */
     utf8Uint8: string[];
-    /** UTF-8 二进制原码. */
+    /** UTF-8 二进制补码. */
     utf8int8Bin: string[];
-    /** UTF-8 Byte(Java). */
+    /** UTF-8 Byte(带符号). */
     utf8Int8: string[];
     /** UTF-16 二进制编码. */
     utf16_2: string;
@@ -106,19 +106,19 @@ export default function Str2BytePage() {
     }
     // UTF-8 Uint8(Golang)
     {
-        const dt: DataType = { key: '5', char: 'UTF-8 Uint8(Golang)' };
+        const dt: DataType = { key: '5', char: 'UTF-8 Uint8(无符号)' };
         chars.forEach((_, i) => dt['i' + i] = perses[i].utf8Uint8);
         data.push(dt);
     }
     // UTF-8 二进制原码
     {
-        const dt: DataType = { key: '6', char: 'UTF-8 二进制原码' };
+        const dt: DataType = { key: '6', char: 'UTF-8 Byte(带符号)补码' };
         chars.forEach((_, i) => dt['i' + i] = perses[i].utf8int8Bin);
         data.push(dt);
     }
     // UTF-8 Byte(Java)
     {
-        const dt: DataType = { key: '7', char: 'UTF-8 Byte(Java)' };
+        const dt: DataType = { key: '7', char: 'UTF-8 Byte(带符号)' };
         chars.forEach((_, i) => dt['i' + i] = perses[i].utf8Int8);
         data.push(dt);
     }
