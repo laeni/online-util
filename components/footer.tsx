@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         {/* github */}
         <div className="mx-0 sm:mx-2">
-          <a href="https://github.com/laeni/online-util" target="_blank">
+          <a href="https://github.com/laeni/online-util" target="_blank" rel="noreferrer">
             <GithubOutlined />
           </a>
         </div>
